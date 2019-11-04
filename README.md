@@ -72,8 +72,6 @@ Once the consumer is running, you may hit `Ctrl+C` at anytime to exit.
 Once the server is running, you may hit `Ctrl+C` at anytime to exit. 
 
 ## Outputs
-Station data from consumer
-`kafka-console-consumer --bootstrap-server localhost:9092 --topic "org.chicago.cta.stations" --from-beginning` to get the
-following output
-
+Station data from consumer:
+`kafka-console-consumer --bootstrap-server localhost:9092 --topic "org.chicago.cta.stations" --from-beginning` 
 ![230 stations](images/cta_stations.png)
