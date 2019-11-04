@@ -72,8 +72,7 @@ Once the consumer is running, you may hit `Ctrl+C` at anytime to exit.
 Once the server is running, you may hit `Ctrl+C` at anytime to exit. 
 
 ## Outputs
-
-You can view the 230 stations defined in Postgres using: 
+Station data from consumer
 `kafka-console-consumer --bootstrap-server localhost:9092 --topic "org.chicago.cta.stations" --from-beginning` to get the
 following output
 
