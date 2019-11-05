@@ -1,13 +1,13 @@
 # Optimizing-Public-Transport
 Optimizing Public Transport with Apache Kafka
 
-## Overview
+## Project Overview
 
 Project is based on streaming event pipline with Apache Kafak and ecosystem. With data obtained from Chicago Transit Authority,
 an event pipleline with constructed with Apache Kafka to simulate train status in realtime. The realtime data is displayed on 
 browser.
 
-## Directions Used In Project
+## Project Implementation Steps
 Dashboard was requested by CTA (Chicago Transit Authority) to display train status for its comuters. Apached kafka and ecosystem 
 tools like REST Proxy and Kafka Connect are used to accomplish this task. 
 
@@ -35,18 +35,22 @@ KSQL is used to aggregate turnstile data for each of our stations.
 6. *Create Kafka Consumers*
 Data in server is consumed and display on status page for commuters.
 
-## Running the simulation
+## Running the simulation(Producer and Consumer)
 There are two pieces of simulation, the `producer` and `consumer`.
-Runing the producer.
+
+### Runing the producer.
 1. `cd producers`
 2. `virtualenv venv`
 3. `. venv/bin/activate`
 4. `pip install r requirements.txt`
 5. `python simulation.py`
 
-Once the consumer is running, you may hit `Ctrl+C` at anytime to exit. 
+Once the producer is running, you may hit `Ctrl+C` at anytime to exit. 
 
-### To run the Faust Stream Processing Application 
+### Running the Consumer
+Before running the consumer, you may want to run the following first:
+
+#### To run the Faust Stream Processing Application 
 
 1. `cd consumers`
 2. `virtualenv venv`
@@ -54,7 +58,7 @@ Once the consumer is running, you may hit `Ctrl+C` at anytime to exit.
 4. `pip install -r requirements.txt`
 5. `faust -A faust_stream worker -l info`
 
-### To run the KSQL Creation Script
+#### To run the KSQL Creation Script
 
 1. `cd consumers`
 2. `virtualenv venv`
@@ -62,7 +66,10 @@ Once the consumer is running, you may hit `Ctrl+C` at anytime to exit.
 4. `pip install -r requirements.txt`
 5. `python ksql.py`
 
-### To run the consumer (NOTE: Do not run consumer until previous ones have succeeded)
+After the above have been ran, you can now run the consumer as below:
+
+**NOTE:** Do not run consumer until previous ones have succeeded
+
 1. `cd consumers`
 2. `virtualenv venv`
 3. `. venv/bin/activate`
