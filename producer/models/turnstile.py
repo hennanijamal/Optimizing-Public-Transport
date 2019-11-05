@@ -15,7 +15,7 @@ class Turnstile(Producer):
     key_schema = avro.load(f"{Path(__file__).parents[0]}/schemas/turnstile_key.json")
 
     #
-    # TODO: Define this value schema in `schemas/turnstile_value.json, then uncomment the below
+    # TODO: Define this value schemas in `schemas/turnstile_value.json, then uncomment the below
     #
     value_schema = avro.load(
        f"{Path(__file__).parents[0]}/schemas/turnstile_value.json"

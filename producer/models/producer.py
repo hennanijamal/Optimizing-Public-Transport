@@ -41,7 +41,7 @@ class Producer:
             "broker.id": 0,
             "log.dirs": "/tmp/kafka-logs",
             "zookeeper.connect": "localhost:2181",
-            "schema.registry.url": "http://localhost:8081",
+            "schemas.registry.url": "http://localhost:8081",
             "bootstrap.servers": "PLAINTEXT://localhost:9092"
         }
 
@@ -52,7 +52,7 @@ class Producer:
 
         # TODO: Configure the AvroProducer
         self.producer = AvroProducer({'bootstrap.servers': self.broker_properties["bootstrap.servers"], 
-                                      'schema.registry.url': self.broker_properties["schema.registry.url"]},
+                                      'schemas.registry.url': self.broker_properties["schemas.registry.url"]},
                                      default_key_schema=self.key_schema, default_value_schema=self.value_schema)
 
     def create_topic(self):

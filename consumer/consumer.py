@@ -44,11 +44,11 @@ class KafkaConsumer:
 
         # TODO: Create the Consumer, using the appropriate type.
         if is_avro is True:
-            self.broker_properties["schema.registry.url"] = "http://localhost:8081"
+            self.broker_properties["schemas.registry.url"] = "http://localhost:8081"
             self.consumer = AvroConsumer({
                 'bootstrap.servers': 'PLAINTEXT://localhost:9092',
                 'group.id' : 'station-group-consumer5',
-                'schema.registry.url': 'http://localhost:8081',
+                'schemas.registry.url': 'http://localhost:8081',
                 'auto.offset.reset': 'earliest'
             })
         else:
