@@ -24,7 +24,7 @@ class Line:
         self.stations = {}
 
     def _handle_station(self, value):
-        """Adds the station to this Line's data models"""
+        """Adds the station to this Line's data model"""
         if value["line"] != self.color:
             return
         self.stations[value["station_id"]] = Station.from_message(value)
