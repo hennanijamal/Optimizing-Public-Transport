@@ -6,10 +6,10 @@ logger = logging.getLogger(__name__)
 
 
 class Weather:
-    """Defines the Weather model"""
+    """Defines the Weather models"""
 
     def __init__(self):
-        """Creates the weather model"""
+        """Creates the weather models"""
         self.temperature = 70.0
         self.status = "sunny"
 

@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 
 
 class Weather(Producer):
-    """Defines a simulated weather model"""
+    """Defines a simulated weather models"""
 
     status = IntEnum(
         "status", "sunny partly_cloudy cloudy windy precipitation", start=0
